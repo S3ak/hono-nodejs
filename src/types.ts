@@ -1,19 +1,8 @@
-export interface Meta {
-  total: number;
-  limit: number;
-  count: number;
-}
+import { z } from "@hono/zod-openapi";
+import type { MetaSchema } from "./schema.js";
+import type { Post } from "./modules/posts/postsTypes.js";
 
-export interface Post {
-  id: number;
-  title: string;
-  img: {
-    url: string;
-    alt: string;
-  };
-  dateCreatedAt: string;
-}
-
+export type Meta = z.infer<typeof MetaSchema>;
 export interface PostsResponse {
   data: Post[];
   meta: Meta;
