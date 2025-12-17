@@ -1,4 +1,4 @@
-import type { Post } from "../posts/postsTypes.js";
+import type { Post } from "../posts/posts.js";
 export interface UserProfile {
   id: string;
   username: string;

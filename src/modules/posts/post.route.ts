@@ -1,0 +1,21 @@
+import { Hono } from "hono";
+import type { PostsResponse } from "./posts";
+import type { Context } from "hono";
+import { getPosts } from "./posts.model.js";
+
+const app = new Hono().get(`/`, (c: Context) => {
+  // const { limit = 30, offset = 0 } = c.req.query();
+
+  const posts = getPosts({});
+
+  return c.json<PostsResponse>({
+    data: posts,
+    meta: {
+      total: 200,
+      limit: 30,
+      count: 1,
+    },
+  });
+});
+
+export default app;
