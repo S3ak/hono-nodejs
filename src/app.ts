@@ -1,26 +1,9 @@
 import { Hono } from "hono";
-import type { PostsResponse } from "./types.js";
-import type { Context } from "hono";
+import posts from "./modules/posts/post.route.js";
+import home from "./modules/home/home.route.js";
 import { BASE_URL } from "./constants.js";
-import { getPosts } from "./modules/posts/posts.model.js";
-
 export const app = new Hono()
-  .get("/", (c: Context) => {
-    return c.text("Bobs your uncle");
-  })
-  .get(`${BASE_URL}/posts`, (c: Context) => {
-    // const { limit = 30, offset = 0 } = c.req.query();
-
-    const posts = getPosts({});
-
-    return c.json<PostsResponse>({
-      data: posts,
-      meta: {
-        total: 200,
-        limit: 30,
-        count: 1,
-      },
-    });
-  });
+  .route(`${BASE_URL}/`, home)
+  .route(`${BASE_URL}/posts`, posts);
 
 export type AppType = typeof app;
