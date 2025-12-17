@@ -4,10 +4,10 @@ import { mockPosts as posts } from "./posts.factory.js";
 
 import { app } from "../../app.js";
 
-describe("POSTS Endpoint", () => {
+describe("# POSTS Endpoint -->", () => {
   const client = testClient(app);
 
-  test("GET /posts", async () => {
+  test("## GET /posts", async () => {
     expect.assertions(2);
 
     const res = await client.api.v1.posts.$get();
