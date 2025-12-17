@@ -1,0 +1,46 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "type": "text",
+      "title": "Getting Started with Node.js",
+      "content": "Learn the basics of Node.js and how to build server-side applications.",
+      "author": "John Doe",
+      "createdAt": "2024-01-15T10:30:00Z",
+      "updatedAt": "2024-01-15T10:30:00Z",
+      "likes": 42
+    },
+    {
+      "id": 2,
+      "type": "image",
+      "title": "Beautiful Sunset",
+      "imageUrl": "https://example.com/sunset.jpg",
+      "author": "Jane Smith",
+      "createdAt": "2024-01-14T15:45:00Z",
+      "updatedAt": "2024-01-14T15:45:00Z",
+      "likes": 128
+    },
+    {
+      "id": 3,
+      "type": "video",
+      "title": "Web Development Tutorial",
+      "videoUrl": "https://example.com/tutorial.mp4",
+      "duration": 3600,
+      "author": "Mike Johnson",
+      "createdAt": "2024-01-13T09:20:00Z",
+      "updatedAt": "2024-01-13T09:20:00Z",
+      "likes": 256
+    },
+    {
+      "id": 4,
+      "type": "link",
+      "title": "Best JavaScript Resources",
+      "url": "https://example.com/js-resources",
+      "description": "Curated list of JavaScript learning materials",
+      "author": "Sarah Lee",
+      "createdAt": "2024-01-12T14:10:00Z",
+      "updatedAt": "2024-01-12T14:10:00Z",
+      "likes": 89
+    }
+  ]
+}
