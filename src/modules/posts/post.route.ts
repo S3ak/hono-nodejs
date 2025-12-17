@@ -1,5 +1,5 @@
 import { Hono } from "hono";
-import type { PostsResponse } from "./posts";
+import type { PostsResponse } from "./posts.js";
 import type { Context } from "hono";
 import { getPosts } from "./posts.model.js";
 
